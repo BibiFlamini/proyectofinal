@@ -25,7 +25,7 @@ p {
 #destacado {
     color:rgb(179, 179, 231);
 }
-h1, h2, h5 {
+h1, h2, h4, h5 {
     font-family: 'Quicksand', sans-serif;
     color:rgb(79, 12, 12);
     font-weight: bold;
@@ -75,6 +75,16 @@ h1, h2, h5 {
 }
 .post .post-contenido {
     margin-right: 20px;
+}
+.nota {
+    margin-right: 50px;
+    margin-top: 100px;
+    font-family: 'Quicksand', sans-serif;
+    float: left;
+}
+.nota img {
+    width: 300px;
+    margin-right: 100px;
 }
 .card {
     width: 18rem;
@@ -149,5 +159,5 @@ aside {
 }
 footer {
     background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
- background-blend-mode: screen;
+    background-blend-mode: screen;
 }

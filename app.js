@@ -4,13 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+require('dotenv').config();
+
 var indexRouter = require('./routes/index');
-var notasRouter = require('./routes/notas');
-var historiaRouter = require('./routes/historia');
-var nosotrosRouter = require('./routes/nosotros');
-var novedadesRouter = require('./routes/novedades');
-var testimoniosRouter = require('./routes/testimonios');
-var conocenosRouter = require('./routes/conocenos');
+var nota1Router = require('./routes/nota1');
+var nota2Router = require('./routes/nota2');
+var nota3Router = require('./routes/nota3');
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -26,12 +25,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/notas', notasRouter);
-app.use('/historia', historiaRouter);
-app.use('/nosotros', nosotrosRouter);
-app.use('/novedades', novedadesRouter);
-app.use('/testimonios', testimoniosRouter);
-app.use('/conocenos', conocenosRouter);
+app.use('/nota1', nota1Router);
+app.use('/nota2', nota2Router);
+app.use('/nota3', nota3Router);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
