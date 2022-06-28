@@ -1,4 +1,19 @@
-  <header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@400;700&family=Quicksand&display=swap" rel="stylesheet">
+    <title>Sitio El Mundo del Vino</title>
+  <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
 <!--AQUÍ COMIENZA EL NAVBAR-->
         <nav class="navbar fixed-top navbar-expand-lg">
             <div class="container">
@@ -9,7 +24,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a id="destacado" class="nav-link active" aria-current="page" data-scroll href="/">Home</a>
+                    <a id="destacado" class="nav-link active" aria-current="page" data-scroll href="#home">Home</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-scroll href="#notas" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,7 +63,7 @@
             </div>
           </nav>
 <!--AQUÍ CIERRA EL NAVBAR-->
-  </header>
+    </header>
 <!--AQUÍ COMIENZA EL HERO-->
     <section class="jumbotron">
       <div class="container">
@@ -66,66 +81,94 @@
     <section class="container">
       <div class="row">
         <section class="posts col-md-9">
+    <!--AQUÍ VA BREADCRUMB-->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Notas</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Nota #1</li>
+            </ol>
+          </nav>
+    <!--AQUÍ CIERRA BREADCRUMB-->
     <!--AQUÍ COMIENZAN LAS NOTAS-->
         <div id="notas" class="col-lg-12 col-md-12 mt-8 mt-sm-0">
           <h2>Notas</h2>  
           <article id="nota1" class="post clearfix">
             <a href="#" class="thumb pull-left">
-              <img class="img-thumbnail" src="images/copa vino.jpg" alt="copa de vino">
+              <img class="img-thumbnail" src="img/copa vino.jpg" alt="copa de vino">
             </a>
             <h2 class="post-title">
-              Una copa de vino al día alarga la vida
+              <a href="#">Una copa de vino al día alarga la vida</a>
             </h2>
             <p><span class="post-fecha">25 de abril de 2022</span> por <span class="post-autor"><a href="#">Bibiana Flamini</a></span></p>
             <p class="post-contenido text-justify"> Científicos descubren que el vino contiene antioxidantes, y sólo una copa al día es suficiente para tener una vida longeva. 
             </p>
             <div class="contenedor-botones">
-              <a href="/nota1" class="btn btn-primary">Leer Mas</a>
+              <a href="#" class="btn btn-primary">Leer Mas</a>
               <a href="#" class="btn btn-success">Comentarios<span class="badge">24</span></a>
             </div>
           </article>
           <article id="nota2" class="post clearfix">
             <a href="#" class="thumb pull-left">
-              <img class="img-thumbnail" src="images/hilera.jpg" alt="hilera viña">
+              <img class="img-thumbnail" src="img/hilera.jpg" alt="hilera viña">
             </a>
             <h2 class="post-title">
-              ¿Qué son los vinos botritizados?
+              <a href="#">¿Qué son los vinos botritizados?</a>
             </h2>
             <p><span class="post-fecha">04 de abril de 2022</span> por <span class="post-autor"><a href="#">Bibiana Flamini</a></span></p>
             <p class="post-contenido text-justify"> Son los vinos producidos con uvas afectadas por el hongo llamado "botritis cinerea", el cual aporta mayor concentración de azúcar, por lo tanto, vinos más dulces. 
             </p>
             <div class="contenedor-botones">
-              <a href="/nota2" class="btn btn-primary">Leer Mas</a>
+              <a href="#" class="btn btn-primary">Leer Mas</a>
               <a href="#" class="btn btn-success">Comentarios<span class="badge">31</span></a>
             </div>
           </article>
           <article id="nota3" class="post clearfix">
             <a href="#" class="thumb pull-left">
-              <img class="img-thumbnail" src="images/cava.jpg" alt="cava bodega">
+              <img class="img-thumbnail" src="img/cava.jpg" alt="cava bodega">
             </a>
             <h2 class="post-title">
-              Cómo tener una cava en casa
+              <a href="#">Cómo tener una cava en casa</a>
             </h2>
             <p><span class="post-fecha">26 de marzo de 2022</span> por <span class="post-autor"><a href="#">Bibiana Flamini</a></span></p>
             <p class="post-contenido text-justify"> Aquellos amantes del vino pueden guardar esta noble bebida, recreando las condiciones de una cava, pero en casa, sólo se necesita un espacio donde se puedan controlar tanto la humedad, como la temperatura. 
             </p>
             <div class="contenedor-botones">
-              <a href="/nota3" class="btn btn-primary">Leer Mas</a>
+              <a href="#" class="btn btn-primary">Leer Mas</a>
               <a href="#" class="btn btn-success">Comentarios<span class="badge">28</span></a>
             </div>
           </article>
         </div>
     <!--AQUÍ CIERRAN LAS NOTAS-->
+    <!--AQUÍ COMIENZA EL PAGINATION-->
+          <nav aria-label="Page navigation">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+              </li>
+            </ul>
+          </nav>
+    <!--AQUÍ CIERRA EL PAGINATION-->
     <!--AQUÍ COMIENZA HISTORIA-->
           <div id="historia" class="row align-items-center py-4">
             <div class="col-lg-2 col-md-3 d-none d-sm-block">
-              <img src="images/familiaviña.JPG" alt="origenes familia" class="img-fluid">
+              <img src="img/familiaviña.JPG" alt="origenes familia" class="img-fluid">
             </div>
             <div class="col-lg-2 col-md-3 d-none d-sm-block">
-              <img src="images/socios.jpg" alt="socios página" class="img-fluid">
+              <img src="img/socios.jpg" alt="socios página" class="img-fluid">
             </div>
             <div class="col-lg-2 col-md-3 d-none d-sm-block">
-              <img src="images/nono.jpg" alt="abuelo" class="img-fluid">
+              <img src="img/nono.jpg" alt="abuelo" class="img-fluid">
             </div>
             <div class="col-lg-4 col-md-6 mt-4 mt-sm-0">
               <h2>Historia</h2>
@@ -139,28 +182,28 @@
               <h2>Nosotros</h2>
               <div class="card-group">
                 <div class="card">
-                  <img src="images/socio1.jpeg" class="card-img-top img-thumbnail" alt="...">
+                  <img src="img/socio1.jpeg" class="card-img-top img-thumbnail" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Carolina Minetti</h5>
                     <p class="card-text">Es enóloga. Trabajó en diversas bodegas y hoy está a cargo de la dirección de Bodega Trepiche.</p>
                   </div>
                 </div>
                 <div class="card">
-                  <img src="images/socio2.jpg" class="card-img-top img-thumbnail " alt="...">
+                  <img src="img/socio2.jpg" class="card-img-top img-thumbnail " alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Ivan Ivars</h5>
                     <p class="card-text">Es Licenciado en Marketing. Trabaja en una empresa de publicidad y posee junto con Rodrigo Perri el Bar "Vino al vino"</p>
                   </div>
                 </div>
                 <div class="card">
-                  <img src="images/socio3.jpg" class="card-img-top img-thumbnail" alt="...">
+                  <img src="img/socio3.jpg" class="card-img-top img-thumbnail" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Paula Fernandez</h5>
                     <p class="card-text">Es Licenciada en Turismo. Trabaja en el área de admisiones de la bodega Finca Dagostino.</p>
                   </div>
                 </div>
                 <div class="card">
-                  <img src="images/socio4.jpg" class="card-img-top img-thumbnail" alt="...">
+                  <img src="img/socio4.jpg" class="card-img-top img-thumbnail" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Rodrigo Perri</h5>
                     <p class="card-text">Es Sommelier. Trabajó en diversos hoteles en el exterior y hace 4 años decidió emprender y fundar su propio bar, tarea que comparte con su amigo Ivan Ivars.</p>
@@ -175,10 +218,10 @@
             <div class="col-md-6 offset-md-1 py-2">
                 <h2>Novedades</h2>
                 <ul class="lista-novedades">
-                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#example1Modal"><img src="images/milagrovinonuevo.jpg"> Fiesta Nacional de la Vendimia 2022 </a></li>
-                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#example2Modal" ><img src="images/enologo.jpg"> De enólogos y sommeliers </a></li>
-                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#example3Modal"><img src="images/degustacion.jpg"> Información sobre degustaciones </a></li>
-                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#example4Modal"><img src="images/copaburbujas.jpg"> Vinos de mendoza al mundo </a></li>
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#example1Modal"><img src="img/milagrovinonuevo.jpg"> Fiesta Nacional de la Vendimia 2022 </a></li>
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#example2Modal" ><img src="img/enologo.jpg"> De enólogos y sommeliers </a></li>
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#example3Modal"><img src="img/degustacion.jpg"> Información sobre degustaciones </a></li>
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#example4Modal"><img src="img/copaburbujas.jpg"> Vinos de mendoza al mundo </a></li>
                 </ul>
             </div>
             <div class="modal fade" id="example1Modal" tabindex="-1" aria-labelledby="example1ModalLabel" aria-hidden="true">
@@ -246,21 +289,21 @@
                   </div>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="images/copabarrica.jpg" class="d-block w-100" alt="...">
+                      <img src="img/copabarrica.jpg" class="d-block w-100" alt="...">
                       <div class="carousel-caption d-none d-md-block">
                         <h5> ¡Me encanta esta página! </h5>
                         <p> Omar, Guaymallén <p>
                       </div>
                     </div>
                     <div class="carousel-item">
-                      <img src="images/copabarrica.jpg" class="d-block w-100" alt="...">
+                      <img src="img/copabarrica.jpg" class="d-block w-100" alt="...">
                       <div class="carousel-caption d-none d-md-block">
                         <h5> Sin dudas, recomendaría esta página </h5>
                         <p> David, Maipú </p>
                       </div>
                     </div>
                     <div class="carousel-item">
-                      <img src="images/copabarrica.jpg" class="d-block w-100" alt="...">
+                      <img src="img/copabarrica.jpg" class="d-block w-100" alt="...">
                       <div class="carousel-caption d-none d-md-block">
                         <h5> La página más completa sobre vinos que he visitado </h5>
                         <p> Belén, San Rafael </p>
@@ -288,43 +331,42 @@
         </div>
         <div id="contactanos" class="col-md-4 mt-4 mt-sm-0 offset-md-1">
           <h2>Contactanos</h2>
-          <form action="/" method="post">
+          <form>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="nombre">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" placeholder="" name="nombre">
+                <input type="text" class="form-control" id="nombre" placeholder="">
               </div>
               <div class="form-group col-md-6">
                 <label for="apellido">Apellido:</label>
-                <input type="text" class="form-control" id="apellido" placeholder="" name="apellido">
+                <input type="text" class="form-control" id="apellido" placeholder="">
               </div>
               <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="text" class="form-control" id="email" placeholder="" name="email">
+                <input type="text" class="form-control" id="email" placeholder="">
               </div>
               <div class="form-group">
                 <label for="tel">Tel:</label>
-                <input type="text" class="form-control" id="tel" placeholder="" name="tel">
+                <input type="text" class="form-control" id="tel" placeholder="">
               </div>
               <div class="form-group">
                 <label for="mensaje">Mensaje:</label>
-                <textarea class="form-control" id="mensaje" rows="4" name="mensaje"></textarea>
+                <textarea class="form-control" id="mensaje" rows="4"></textarea>
               </div>
               <br>
               <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
           </form>
-          {{#if message}}
-          <p>{{message}}</p>
-          {{/if}}
         </div>
       </div>
     </section>
+ 
 <!--AQUÍ CIERRA EL CONTENIDO PRINCIPAL-->
 <!--AQUÍ COMIENZA EL ASIDE-->
-<aside class="col-md-3 sidebar sticky-top">
+    <aside class="col-md-3">
       <br>
       <br>
+    <!--AQUÍ COMIENZA CATEGORÍAS-->
       <h2>Categorías</h2>
       <div class="list-group">
         <ul class="lista-categorias">
@@ -347,5 +389,73 @@
         </ul>
       </div>
       <br>
-</aside>
+    <!--AQUÍ CIERRA CATEGORÍAS-->
+    <!--AQUÍ COMIENZA ARTÍCULOS RECIENTES-->
+      <h2>Artículos Recientes</h2>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <strong>Una copa de vino al día alarga la vida</strong>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Científicos descubren que el vino contiene antioxidantes, y sólo una copa al día es suficiente para tener una vida longeva.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <strong>¿Qué son los vinos botritizados?</strong>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Son los vinos producidos con uvas afectadas por el hongo llamado "botritis cinerea", el cual aporta mayor concentración de azúcar, por lo tanto, vinos más dulces.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <strong>Cómo tener una cava en casa</strong>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Aquellos amantes del vino pueden guardar esta noble bebida, recreando las condiciones de una cava, pero en casa, sólo se necesita un espacio donde se puedan controlar tanto la humedad, como la temperatura.
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
 <!--AQUÍ CIERRA EL ASIDE-->
+  </div>  
+<!--AQUÍ COMIENZA EL FOOTER-->
+  <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a data-scroll href="#home" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a data-scroll href="#notas" class="nav-link px-2 text-muted">Notas</a></li>
+          <li class="nav-item"><a data-scroll href="#historia" class="nav-link px-2 text-muted">Historia</a></li>
+          <li class="nav-item"><a data-scroll href="#nosotros" class="nav-link px-2 text-muted">Nosotros</a></li>
+          <li class="nav-item"><a data-scroll href="#novedades" class="nav-link px-2 text-muted">Novedades</a></li>
+          <li class="nav-item"><a data-scroll href="#testimonio" class="nav-link px-2 text-muted">Opiniones</a></li>
+          <li class="nav-item"><a data-scroll href="#visitanos" class="nav-link px-2 text-muted">Visitanos</a></li>
+          <li class="nav-item"><a data-scroll href="#contactanos" class="nav-link px-2 text-muted">Contactanos</a></li>
+        </ul>
+        <p class="text-center text-muted">&copy; 2022 Bibiana Flamini - Todos los derechos reservados</p>
+      </footer>
+  </div>
+<!--AQUÍ CIERRA EL FOOTER-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+</body>
+</html>
