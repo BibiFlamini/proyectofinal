@@ -41,7 +41,7 @@ h1, h2, h4, h5 {
     text-shadow: 0 0 3px rgb(204, 143, 143);
 }
 .hero {
-    background: url(../images/fondocopa.jpg) no-repeat;
+    background: url(../images/cheers.jpg) no-repeat;
     background-size: cover;
     height: 50vh;
     min-height: 600px;
