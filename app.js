@@ -13,7 +13,7 @@ var nota2Router = require('./routes/nota2');
 var nota3Router = require('./routes/nota3');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');
-var promocionesRouter = require('./routes/admin/promociones');
+var novedadesRouter = require('./routes/admin/novedades');
 
 var app = express();
 
@@ -53,7 +53,7 @@ app.use('/nota2', nota2Router);
 app.use('/nota3', nota3Router);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
-app.use('/admin/promociones', secured, promocionesRouter);
+app.use('/admin/novedades', secured, novedadesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
