@@ -5,12 +5,15 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 require('dotenv').config();
+var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var nota1Router = require('./routes/nota1');
 var nota2Router = require('./routes/nota2');
 var nota3Router = require('./routes/nota3');
 var usersRouter = require('./routes/users');
+var loginRouter = require('./routes/admin/login');
+var promocionesRouter = require('./routes/admin/promociones');
 
 var app = express();
 
@@ -24,11 +27,33 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.use(session({
+  secret: 'electricidadcuandotumemiras',
+  resave: false,
+  saveUninitialized: true
+}));
+
+secured = async (req, res, next) => {
+  try {
+    console.log(req.session.id_usuario);
+    if (req.session.id_usuario) {
+      next ();
+    } else {
+      res.redirect('/admin/login')
+    }
+  } catch(error) {
+    console.log(error);
+  }
+}
+
 app.use('/', indexRouter);
 app.use('/nota1', nota1Router);
 app.use('/nota2', nota2Router);
 app.use('/nota3', nota3Router);
 app.use('/users', usersRouter);
+app.use('/admin/login', loginRouter);
+app.use('/admin/promociones', secured, promocionesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
