@@ -38,11 +38,13 @@ h1, h2, h4, h5 {
     font-weight: bold;
 }
 .jumbotron .titulo-blog {
-    text-shadow: 0 0 3px rgb(204, 143, 143);
+    text-shadow: 0 0 2px rgb(134, 77, 77);
+    font-size: 50px;
 }
 .hero {
     background: url(../images/cheers.jpg) no-repeat;
     background-size: cover;
+    font-size: 20px;
     height: 50vh;
     min-height: 600px;
     color: antiquewhite;
