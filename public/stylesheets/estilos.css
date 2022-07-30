@@ -186,3 +186,40 @@ footer {
 .modal-body {
     padding: 0;
 }
+.lista-promociones {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+}
+.lista-promociones li a {
+    margin: 4px 0;
+}
+.lista-promociones li a {
+    background-color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    transition: all .25 ease-in-out;
+    display: block;
+}
+.lista-promociones li a:hover {
+    color: rgb(79, 12, 12);
+    background-color: #dadada;
+}
+.lista-promociones li a img {
+    width: 120px;
+    height: 50px;
+    filter: grayscale();
+    transition: all .25 ease-in-out;
+    margin-right: 1rem;
+    opacity: 0.7;
+}
+.lista-promociones li a:hover img {
+    filter: none;
+    margin-right: 1.4rem;
+    opacity: 1;
+}
+.modal-dialog .modal-body{
+    margin-left: 20px;
+}

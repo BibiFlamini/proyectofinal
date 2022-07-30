@@ -11,9 +11,10 @@ var indexRouter = require('./routes/index');
 var nota1Router = require('./routes/nota1');
 var nota2Router = require('./routes/nota2');
 var nota3Router = require('./routes/nota3');
+var promocionesRouter = require('./routes/promociones');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');
-var novedadesRouter = require('./routes/admin/novedades');
+var adminRouter = require('./routes/admin/promociones');
 
 var app = express();
 
@@ -51,9 +52,10 @@ app.use('/', indexRouter);
 app.use('/nota1', nota1Router);
 app.use('/nota2', nota2Router);
 app.use('/nota3', nota3Router);
+app.use('/promociones', promocionesRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
-app.use('/admin/novedades', secured, novedadesRouter);
+app.use('/admin/promociones', secured, adminRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

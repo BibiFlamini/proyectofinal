@@ -1,0 +1,29 @@
+<div class="container" style="margin-top: 50px;">
+    <div id="promociones" class="row py-4">
+            <div class="col-md-6 offset-md-1 py-2">
+                <h2>Promociones</h2>
+                <ul class="lista-promociones">
+                  {{#each promociones}}
+                    <li>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#Modal{{id}}"><img src="images/riverwine.jpg"> {{titulo}} </a>
+                     </li>
+                  {{/each}}
+                </ul>
+            </div>
+            {{#each promociones}}
+            <div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-labelledby="example1ModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                 <div class="modal-content">
+                    <div class="modal-header">
+                       <h5 class="modal-title" id="exampleModalLabel">{{titulo}}</h5>
+                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                     <h6>{{subtitulo}}</h6>
+                      <p>{{vigencia}}</p>
+                    </div>
+                </div>
+             </div>
+            </div>
+            {{/each}}
+    </div>
