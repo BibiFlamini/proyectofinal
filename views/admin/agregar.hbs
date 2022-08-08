@@ -1,0 +1,25 @@
+<div class="container" style="margin: 100px auto">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4>Para agregar una nueva promoción, complete la totalidad de los campos</h4>
+            <form action="/admin/promociones/agregar" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Titulo" name="titulo">
+                </div>
+                <br>
+                <div class="form-group">
+                    <textarea type="text" class="form-control" placeholder="Cuerpo" name="cuerpo"></textarea>
+                </div>
+                <br>
+                <div class="form-group">
+                    <textarea type="text" class="form-control" placeholder="Vigencia" name="vigencia"></textarea>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+            {{#if error}}
+                <h5>{{message}}</h5>
+            {{/if}}
+        </div>
+    </div>
+</div>
