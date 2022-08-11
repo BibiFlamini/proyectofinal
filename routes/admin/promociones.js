@@ -48,7 +48,7 @@ router.post('/agregar', async (req, res, next) => {
 router.get('/modificar/:id', async (req, res, next) => {
     var id = req.params.id;
     var promocion = await promocionesModel.getPromocionesById(id);
-    res.render('/admin/modificar', {
+    res.render('admin/modificar', {
         layout: 'admin/layout',
         promocion
     });
@@ -67,7 +67,7 @@ router.post('/modificar', async (req, res, next) => {
     res.redirect('/admin/promociones');
     } catch (error) {
         console.log(error)
-        res.render('/admin/modificar', {
+        res.render('admin/modificar', {
             layout: 'admin/layout',
             error: true, 
             message: 'La promocion no fue modificada'
