@@ -4,22 +4,25 @@
                 <h2>Promociones</h2>
                 <ul class="lista-promociones">
                   {{#each promociones}}
-                    <li>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#Modal{{id}}"><img src="images/riverwine.jpg"> {{titulo}} </a>
+                     <li>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#Modal{{id}}"><img src="{{imagen}}" width="120"> {{titulo}} </a>
                      </li>
                   {{/each}}
                 </ul>
             </div>
             {{#each promociones}}
-            <div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-labelledby="example1ModalLabel" aria-hidden="true">
+            <div class="modal fade" id="Modal{{id}}" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                  <div class="modal-content">
                     <div class="modal-header">
                        <h5 class="modal-title" id="exampleModalLabel">{{titulo}}</h5>
-                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                       </button>
                     </div>
                     <div class="modal-body">
                      <h6>{{cuerpo}}</h6>
+                     <img src="{{imagen}}">
                       <p>{{vigencia}}</p>
                     </div>
                 </div>

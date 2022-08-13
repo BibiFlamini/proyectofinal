@@ -3,10 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var fileUpload = require('express-fileupload');
+
 
 require('dotenv').config();
 var session = require('express-session');
+var fileUpload = require('express-fileupload');
 
 var indexRouter = require('./routes/index');
 var nota1Router = require('./routes/nota1');
@@ -34,7 +35,7 @@ app.use(session({
   secret: 'electricidadcuandotumemiras',
   resave: false,
   saveUninitialized: true
-}));
+}))
 
 secured = async (req, res, next) => {
   try {
@@ -51,7 +52,7 @@ secured = async (req, res, next) => {
 
 app.use(fileUpload({
   useTempFiles: true,
-  tempFileDir: '/tmp'
+  tempFileDir: '/tmp/'
 }));
 
 app.use('/', indexRouter);
