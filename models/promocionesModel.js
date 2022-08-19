@@ -42,5 +42,11 @@ async function modificarPromocionById(obj, id) {
         }
 }
 
+async function buscarPromociones(busqueda) {
+        var query = "select * from promociones where titulo like ? OR cuerpo like ? OR vigencia like ? ";
+        var rows = await pool.query(query, ['%' + busqueda + '%', '%' + busqueda + '%', '%' + busqueda + '%']);
+        return rows;
+}
 
-module.exports = { getPromociones, deletePromocionesById, insertPromocion, getPromocionById, modificarPromocionById }
+
+module.exports = { getPromociones, deletePromocionesById, insertPromocion, getPromocionById, modificarPromocionById, buscarPromociones }

@@ -7,14 +7,17 @@ const uploader = util.promisify(cloudinary.uploader.upload);
 const destroy = util.promisify(cloudinary.uploader.destroy);
 
 router.get('/', async function (req, res, next) {
-
-    var promociones = await promocionesModel.getPromociones();
-
+    var promociones 
+    if (req.query.q === undefined) {
+        promociones = await promocionesModel.getPromociones();
+    } else {
+        promociones = await promocionesModel.buscarPromociones(req.query.q);
+    }
     promociones = promociones.map(promocion => {
         if (promocion.img_id) {
             const imagen = cloudinary.image(promocion.img_id, {
-                width: 100,
-                height: 100,
+                width: 60,
+                height: 60,
                 crop: 'fill'
             });
             return {
@@ -31,7 +34,9 @@ router.get('/', async function (req, res, next) {
     res.render('admin/promociones', {
         layout:'admin/layout',
         persona: req.session.nombre,
-        promociones
+        promociones,
+        is_search: req.query.q !== undefined,
+        q: req.query.q
     });
 });
 
@@ -125,7 +130,6 @@ router.post('/modificar', async (req, res, next) => {
         })
     }
 });
-
 
 
 module.exports = router;

@@ -9,16 +9,22 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-7">
+        <div class="col-6">
             <h3>Listado de Promociones</h3>
         </div>
         <div class="col-2 text-right">
             <a href="/admin/promociones/agregar" class="btn btn-success">
             <i class="fa fa-plus"></i>Nuevo</a>
         </div>
+        <div class="col-3 text-right">
+            <form class="form-inline my-2 my-lg-0" action="/admin/promociones" method="get">
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" name="q" {{#if q}}value="{{q}}"{{/if}}>
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
     </div>
     <div class="row">
-        <div class="col-8">
+        <div class="col-7">
             <table class="table">
                 <thead>
                     <tr class="table-dark">
@@ -42,6 +48,11 @@
                     {{/each}}
                 </tbody>
             </table>
+             {{#if is_search}}
+                {{#unless promociones.lenght}}
+                    No se encontraron resultados para "<strong>{{q}}</strong>"
+                {{/unless}}
+            {{/if}}
         </div>
     </div>
 </div>

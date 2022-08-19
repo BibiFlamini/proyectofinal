@@ -1,9 +1,9 @@
 <div class="container" style="margin: 100px auto">
     <div class="row">
         <div class="col-6 offset-3">
-            <h4>Para modificar una nueva promoción, complete la totalidad de los campos</h4>
-            <input type="hidden" value="{{promocion.id}}" name="id">
+            <h4>Para modificar una promoción, complete la totalidad de los campos</h4>
             <form action="/admin/promociones/modificar" method="post" enctype="multipart/form-data">
+                <input type="hidden" value="{{promocion.id}}" name="id">
                 <div class="form-group">
                     <label for="">Titulo</label>
                     <input type="text" class="form-control" name="titulo" value="{{promocion.titulo}}">
